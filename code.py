@@ -34,6 +34,7 @@ print("Mean of Sampling Distribution", meanOfSample)
 fig = ff.create_distplot([meanlist],["Population Mean"], show_hist = False)
 fig.add_trace(go.Scatter(x=[mean, mean], y=[0,0.17],mode = "lines",name = "Mean"))
 fig.add_trace(go.Scatter(x=[meanOfSample, meanOfSample], y=[0,0.17],mode = "lines",name = "Mean of Sample"))
+fig.add_trace(go.Scatter(x=[firststdDevStart,firststdDevStart], y=[0,0.17],mode = "lines",name = "Standard Deviation 1 start"))
 fig.add_trace(go.Scatter(x=[firststdDevEnd,firststdDevEnd], y=[0,0.17],mode = "lines",name = "Standard Deviation 1 end"))
 fig.show()
 zScore = (meanOfSample - mean)/stdDev
